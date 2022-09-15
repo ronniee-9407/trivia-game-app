@@ -1,38 +1,181 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+  background-color: #576c6a;
+  padding: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 15px rgba(0, 252, 176, 0.651);
+  letter-spacing: 0.5rem;
+  height: 40px;
+  font-size: 32px;
+  font-weight: 500;
+  box-shadow: black 0 0 8px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.fun {
+  position: relative;
+  left: 25%;
+  width: 50%;
+  background-color: transparent;
+  
+  padding: 10px;
+  color: #fff;
+  text-shadow: 2px 2px 15px rgba(0, 252, 176, 0.651);
+  letter-spacing: 0.5rem;
+  height: 35px;
+  font-size: 32px;
+  font-weight: 500;
+  display:flex ;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+}
+.header a {
+  text-decoration: none;
+  color: #fff;
+  
+  
 }
 
-.App-link {
-  color: #61dafb;
+.heading {
+  text-align: center;
+  line-height: 1;
+}
+.form {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+select {
+  width: 90%;
+  padding: 5px 10px;
+  border: 1px rgba(0, 0, 0, 0.322) solid;
+  border-radius: 5px;
+}
+
+.box {
+  margin-top: 20px;
+  width: 200px;
+  height: 250px;
+  padding: 10px 20px;
+  border-radius: 5%;
+  border-bottom: rgba(0, 252, 176, 0.651) 10px solid;
+  box-shadow: rgb(112, 112, 112) 0 0 10px 0;
+}
+
+
+input[type="submit"],
+.btn {
+  position: relative;
+  left: 45%;
+  font-weight: bold;
+  border: solid rgba(0, 0, 0, 0.322) 1px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(13, 79, 17);
+  transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0s;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+  color: #fff;
+}
+input[type="submit"]:focus {
+  outline: 0;
+}
+
+.btn:hover {
+  background-color: black;
+  color: #fff;
+}
+
+
+/* questionUI.tsx */
+
+.question {
+  width: 80%;
+  margin: 20px auto;
+  box-shadow: rgba(18, 18, 19, 0.762) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  background-color: rgb(118, 115, 115);
+}
+
+.questionBox {
+  padding: 20px 15px;
+  border: solid rgba(0, 0, 0, 0.322) 1px;
+  border-radius: 10px;
+  box-shadow: rgb(112, 112, 112) 0 0 5px 0;
+}
+
+.options {
+  margin: 10px;
+}
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+.question input[type="submit"] {
+  margin: 10px;
+}
+
+
+/* Loading */
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #292929;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+.loader {
+  color: #141414;
+  text-indent: -9999em;
+  margin: 88px auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: "";
+}
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+.loader:after {
+  left: 1.5em;
+}
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
   }
-  to {
-    transform: rotate(360deg);
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
   }
 }
